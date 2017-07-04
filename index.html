@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="utf-8">
+<head>
+
+
+<title>Los Mejores Restaurantes del mundo 2017</title>
+<script src="jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
+	rel="stylesheet">
+</head>
+<body>
+ 
+	<div id="wrapper">
+		<header>
+			<h1>Los Mejores Restaurantes del Mundo 2017</h1>
+		</header>
+		<table id="tblrestaurantes">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Ciudad</th>
+					<th>País</th>
+					<th>Comida</th>
+					<th>URL</th>
+				</tr>
+			</thead>
+			<tbody>
+				<script>
+								$(document)
+							.ready(
+									function() {
+
+										
+										$
+												.getJSON(
+														"restaurantes.json",
+														function(datos) {
+
+															for ( var i in datos.restaurant) {
+																var rowHtml = "<tr><td>"
+																		+ datos.restaurant[i].nombre
+																		+ "</td><td>"
+																		+ datos.restaurant[i].ciudad
+																		+ "</td><td>"
+																		+ datos.restaurant[i].pais
+																		+"</td><td>"
+																		+ datos.restaurant[i].comida 
+																		+"</td><td><a href='"+ datos.restaurant[i].url+"'>"
+																		+ datos.restaurant[i].url
+																		+"</td></tr>"
+																$(
+																		"#tblrestaurantes")
+																		.append(
+																				rowHtml);
+
+															} 
+
+														});
+									});
+				</script>
+			</tbody>
+		</table> 
+	</div>
+</body>
+</html>

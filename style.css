@@ -1,0 +1,21 @@
+#wrapper{
+	text-align: center;
+	margin: 0px auto;
+
+}
+
+table {
+	width: 1050px;
+    border: 1px solid #cccccc;
+	font-family: 'Varela Round', sans-serif;
+	border-collapse: collapse;
+	center: rigth;
+	margin: auto;
+}
+
+
+	td,th{
+	border:2px solid #cccccc;
+	background-color: #f7f9f3;
+	text-aling: center;
+}
